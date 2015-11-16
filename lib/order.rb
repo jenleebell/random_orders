@@ -6,7 +6,6 @@ class Order
   end
 
   define_method(:randomized_orders)
-
     until @total_orders.length == 100
       @quantity = rand(1..100)
       @method = rand(1..6)
@@ -14,5 +13,5 @@ class Order
       total_orders.push(order)
     end
 
-    return total_orders
+    return @total_orders
 end
